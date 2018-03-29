@@ -1,0 +1,28 @@
+#mainHeader {
+	text-align: center;
+	color: white;
+	padding-top: 300px;
+}
+
+header {
+	height: 800px;
+	background-image: url("./glass1.jpg");
+	background-attachment: fixed;
+	background-repeat: none;
+	background-position: center center;
+	background-size: cover;
+}
+
+#individualBrewery {
+	margin: 100px;
+	background-color: rgba(157, 157, 51, 0.7);
+
+}
+
+#mainContent {
+	background-image: url("./beer1.jpg");
+	background-attachment: fixed;
+	background-repeat: none;
+	background-position: center center;
+	background-size: cover;
+}
