@@ -26,3 +26,9 @@ header {
 	background-position: center center;
 	background-size: cover;
 }
+
+h1 {
+	font-family: 'Anton', sans-serif;
+	font-size: 800%;
+}
+
