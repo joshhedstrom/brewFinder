@@ -1,16 +1,3 @@
-/*header
-{
-    height: 800px;
-    width: 100%;
-
-    background-image: url('./glass1.jpg');
-    background-repeat: none;
-    background-attachment: fixed;
-    background-position: center center;
-    background-size: cover;
-    margin-top: -4%;
-}*/
-
 footer
 {
 	text-align: center;
@@ -36,13 +23,6 @@ footer
     background-color: rgba(157, 157, 51, .7);
 }
 
-/*#mainContent
-{
-    background-image: url('./beer1.jpg');
-    background-repeat: none;
-    background-attachment: fixed;
-    background-position: center center;
-    background-size: cover;
-    padding: 1%;
+#coverImg {
+    width: 100%;
 }
-*/
