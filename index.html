@@ -14,7 +14,7 @@
 		<link href="https://fonts.googleapis.com/css?family=Anton|Fjalla+One" rel="stylesheet">
 		<link rel="stylesheet" href="./style.css">
 	</head>
-	<body>
+	<body class="#bbbbbb grey lighten-2">
 		<main>
 			<div class="parallax-container">
 				<div class="parallax"><img src="assets/images/alcohol-ale-bar-159291.jpg" id="coverImg"></div>
@@ -23,13 +23,15 @@
 					
 				</header>
 			</div>
-			<div class="section #9e9e9e grey">
+			<div class="section #ffffff grey lighten-3">
 				<div class="row container">
 					<h2 class="header">Search for Your Local Breweries</h2>
 					<form action="search">
 						<div class="row">
 							<div class="input-field col m6 center">
-								<input type="search" id="searchField" placeholder="Search for Local Breweries">
+								<textarea id="searchField" class="materialize-textarea"></textarea>
+								<label for="searchField">Click Here to search your local breweries</label>
+								<!-- <input type="search" id="searchField" placeholder="Search for Local Breweries"> -->
 							</div>
 						</div>
 					</form>
@@ -40,7 +42,7 @@
 			</div> -->
 			<section>
 				<div id="mainContent">
-					<div id="breweryElement">
+					<div class="#ffffff grey lighten-3" id="breweryElement">
 						<div class="row">
 							<h4 id="breweryName">Surly</h4>
 							<div class="col s12 m2">
