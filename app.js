@@ -5,6 +5,11 @@ $(document).ready(function(){
     $('.parallax').parallax();
   });
 
+    const userLocation = navigator.geolocation.getCurrentPosition(function(position){
+      console.log(position);
+    
+    })
+
     //googole api key and access link
     // <script src="https://maps.googleapis.com/maps/api/js?sensor=true&key=AIzaSyBSnJtTqZp2Nzg7w1o1rF19y2Eic3IuhCQ&libraries=places"></script> 
 
@@ -33,12 +38,12 @@ $(document).ready(function(){
 
   });
 
-  
+  // Search button that gathers search field when user clicks search button, it also grabs users geoLocation
 $("#searchButton").on("click", function(e) {
  console.log("You clicked the Search Button!");
  let userSearchTitle = $("#searchField").val();
-  // navigator.geolocation.getCurrentPosition();
-  // console.log(navigator.geolocation.getCurrentPosition());
+ let userPreLimSearch = "https://maps.googleapis.com/maps/api/geocode/json?address=" + userSearchTitle + "&key=AIzaSyBSnJtTqZp2Nzg7w1o1rF19y2Eic3IuhCQ?"
+ let googleGeocoding = 
 
  event.preventDefault();
 });
