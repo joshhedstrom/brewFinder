@@ -18,14 +18,12 @@ footer
 
 #mainHeader
 {
-    font-family: 'Anton', sans-serif;
-    font-size: 800%;
-
-    /*padding-top: 300px;*/
-
+   font-family: 'Josefin Sans', sans-serif;
+    font-size: 1361%;
+    padding-top: 130px;
     text-align: center;
-
     color: white;
+    letter-spacing: -11px;
 }
 
 
