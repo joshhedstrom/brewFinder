@@ -1,6 +1,5 @@
-footer
-{
-	text-align: center;
+#coverImg {
+    width: 100%;
 }
 
 #mainHeader
@@ -19,12 +18,20 @@ footer
 
 #breweryElement
 {
-    margin: 5%;
-    padding: 1%;
     width: auto;
     background-color: rgba(157, 157, 51, .7);
+
 }
 
-#coverImg {
-    width: 100%;
+.breweryInfo {
+    font-size: 20px;
+}
+
+#picture {
+    width: 150px;
+}
+
+footer
+{
+	text-align: center;
 }
