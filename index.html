@@ -6,39 +6,44 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta name="description" content="A web app designed to help you find a brewery near you.">
 		<title>brewFinder</title>
+		<link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
 		<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Anton|Fjalla+One" rel="stylesheet">
 		<link rel="stylesheet" href="./style.css">
 	</head>
-	<body>
+	<body class="#bbbbbb grey lighten-2">
 		<main>
 			<div class="parallax-container">
-				<div class="parallax"><img src="assets/images/alcohol-alcoholic-ale-681847.jpg"></div>
+				<div class="parallax"><img src="assets/images/alcohol-ale-bar-159291.jpg" id="coverImg"></div>
 				<header>
-					<h1 id="mainHeader" class="z-depth-2">brewFinder</h1>
+					<h1 id="mainHeader">brewFinder</h1>
+					
+				</header>
+			</div>
+			<div class="section #ffffff grey lighten-3">
+				<div class="row container">
+					<h2 class="header">Search for Your Local Breweries</h2>
 					<form action="search">
 						<div class="row">
 							<div class="input-field col m6 center">
-								<input type="search" id="searchField" placeholder="Search for Local Breweries">
+								<textarea id="searchField" class="materialize-textarea"></textarea>
+								<label for="searchField">Click Here to search your local breweries</label>
+								<!-- <input type="search" id="searchField" placeholder="Search for Local Breweries"> -->
 							</div>
 							<button type="button" id="current-location">Use Current Location</button>
 						</div>
 					</form>
-				</header>
-			</div>
-			<div class="section yellow">
-				<div class="row container">
-					<h2 class="header">Parallax</h2>
-					<p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
 				</div>
 			</div>
-			<div class="parallax-container">
-				<div class="parallax"><img src="./beer1.jpg"></div>
-			</div>
+			<!-- <div class="parallax-container">
+				<div class="parallax"><img src="assets/images/alcohol-alcoholic-beer-1862.jpg"></div>
+			</div> -->
 			<section>
 				<div id="mainContent">
-					<div id="breweryElement">
+					<div class="#ffffff grey lighten-3" id="breweryElement">
 						<div class="row">
 							<h4 id="breweryName">Surly</h4>
 							<div class="col s12 m2">
