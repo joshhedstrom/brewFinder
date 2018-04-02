@@ -6,95 +6,68 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta name="description" content="A web app designed to help you find a brewery near you.">
 		<title>brewFinder</title>
+		<link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+		 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Anton|Fjalla+One" rel="stylesheet">
 		<link rel="stylesheet" href="./style.css">
 	</head>
-	<body>
+	<body class="#bbbbbb grey lighten-2">
 		<main>
 			<div class="parallax-container">
-				<div class="parallax"><img src="./glass1.jpg"></div>
+				<div class="parallax"><img src="assets/images/alcohol-ale-bar-159291.jpg" id="coverImg"></div>
 				<header>
-					<h1 id="mainHeader" class="z-depth-2">brewFinder</h1>
+					<h1 id="mainHeader">brewFinder</h1>
+					
+				</header>
+			</div>
+			<div class="section #ffffff grey lighten-3">
+				<div class="row container">
+					<h2 class="header">Search for Your Local Breweries</h2>
 					<form action="search">
 						<div class="row">
-							<div class="input-field col m6 center">
-								<input type="search" id="searchField" placeholder="Search for Local Breweries">
+							<div>
+								<div class="input-field col m6 center">
+									<input type="search" id="searchField" placeholder="Search for Local Breweries">
+								</div>
+								<button class="btn btn-large waves-effect #212121 grey darken-2" type="button" id="current-location"><i class="medium material-icons">my_location</i></button>
 							</div>
 						</div>
 						<div class="button">
 							<button type="submit" id="searchButton" data-search="">Search Breweries</button>
 						</div>
 					</form>
-				</header>
-			</div>
-			<div class="section yellow">
-				<div class="row container">
-					<h2 class="header">Parallax</h2>
-					<p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
 				</div>
 			</div>
+
 			<div class="parallax-container">
-				<div class="parallax"><img src="./beer1.jpg"></div>
-				
-			</div>
+			<!-- <div class="parallax-container">
+					<div class="parallax"><img src="assets/images/alcohol-alcoholic-beer-1862.jpg"></div>
+			</div> -->
 			<section>
 				<div id="mainContent">
-					<div id="breweryElement">
+					<div class="#ffffff grey lighten-3" id="breweryElement">
 						<div class="row">
-							<h4>Brewery example</h4>
-							<div class="col s12 m6">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat nesciunt voluptatibus illum earum doloribus dolores, commodi, reprehenderit consectetur recusandae quod asperiores saepe doloremque unde sunt quibusdam ad ab, adipisci aspernatur.
+							<h4 id="breweryName">Surly</h4>
+							<div class="col s12 m2">
+								<img id="picture" src="./assets/images/beer-blur-close-up-250465.jpg" alt="brewery image">
 							</div>
-							<div class="col s12 m6">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, temporibus dignissimos impedit accusantium illum amet vitae quibusdam hic ratione maxime deserunt ipsam et excepturi nam vel quisquam quo commodi quos?
-							</div>
-						</div>
-						<div class="row">
-							<div class="col s12 m6">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit facere tempora sit blanditiis tempore quo natus sequi tenetur ea provident, aspernatur nesciunt adipisci voluptatem repellendus assumenda commodi, sunt porro quisquam!
-							</div>
-							<div class="col s12 m6">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore exercitationem minus facilis, illum neque numquam voluptatum iusto eos natus sequi odit assumenda quam nostrum, aliquid, deserunt quisquam quaerat non ex.
-							</div>
-						</div>
-					</div>
-					<div id="breweryElement">
-						<div class="row">
-							<h4>Brewery example</h4>
-							<div class="col s12 m6">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat nesciunt voluptatibus illum earum doloribus dolores, commodi, reprehenderit consectetur recusandae quod asperiores saepe doloremque unde sunt quibusdam ad ab, adipisci aspernatur.
-							</div>
-							<div class="col s12 m6">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, temporibus dignissimos impedit accusantium illum amet vitae quibusdam hic ratione maxime deserunt ipsam et excepturi nam vel quisquam quo commodi quos?
-							</div>
-						</div>
-						<div class="row">
-							<div class="col s12 m6">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit facere tempora sit blanditiis tempore quo natus sequi tenetur ea provident, aspernatur nesciunt adipisci voluptatem repellendus assumenda commodi, sunt porro quisquam!
-							</div>
-							<div class="col s12 m6">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore exercitationem minus facilis, illum neque numquam voluptatum iusto eos natus sequi odit assumenda quam nostrum, aliquid, deserunt quisquam quaerat non ex.
-							</div>
-						</div>
-					</div>
-					<div id="breweryElement">
-						<div class="row">
-							<h4>Brewery example</h4>
-							<div class="col s12 m6">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat nesciunt voluptatibus illum earum doloribus dolores, commodi, reprehenderit consectetur recusandae quod asperiores saepe doloremque unde sunt quibusdam ad ab, adipisci aspernatur.
-							</div>
-							<div class="col s12 m6">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, temporibus dignissimos impedit accusantium illum amet vitae quibusdam hic ratione maxime deserunt ipsam et excepturi nam vel quisquam quo commodi quos?
-							</div>
-						</div>
-						<div class="row">
-							<div class="col s12 m6">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit facere tempora sit blanditiis tempore quo natus sequi tenetur ea provident, aspernatur nesciunt adipisci voluptatem repellendus assumenda commodi, sunt porro quisquam!
-							</div>
-							<div class="col s12 m6">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore exercitationem minus facilis, illum neque numquam voluptatum iusto eos natus sequi odit assumenda quam nostrum, aliquid, deserunt quisquam quaerat non ex.
+							<div class="breweryInfo">
+								<div class="col s12 m5">
+									<p id="ratings">Stars: *****</p>
+									<p id="dollars">Cost: $$$</p>
+									<p id="open">open now</p>
+									<p id="yelpSite">www.yelp .com</p>
+								</div>
+								<div class="col s12 m5">
+									<p id="distance">5 miles</p>
+									<p id="phone">(763) 999-4040</p>
+									<p id="address">520 Malcolm Ave SE <br>
+									Minneapolis, MN 55414</p>
+								</div>
 							</div>
 						</div>
 					</div>
