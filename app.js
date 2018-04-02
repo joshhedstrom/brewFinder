@@ -10,6 +10,8 @@ $(document).ready(function(){
     
     })
 
+  
+
     //googole api key and access link
     // <script src="https://maps.googleapis.com/maps/api/js?sensor=true&key=AIzaSyBSnJtTqZp2Nzg7w1o1rF19y2Eic3IuhCQ&libraries=places"></script> 
 
@@ -42,16 +44,17 @@ $(document).ready(function(){
 $("#searchButton").on("click", function(e) {
  console.log("You clicked the Search Button!");
  let userSearchTitle = $("#searchField").val();
+ //attaches User search result to the https address required by googlemaps api
  let userPreLimSearch = "https://maps.googleapis.com/maps/api/geocode/json?address="+userSearchTitle+"&key=AIzaSyBSnJtTqZp2Nzg7w1o1rF19y2Eic3IuhCQ?"
  let googleGeocoding = 
 console.log(userPreLimSearch);
  event.preventDefault();
-//  $.ajax({
-//    url: userPreLimSearch, 
-//    method: "Get"
-//  })
-//  .then(function(response){
-//   let response = reponse.data;
-//   console.log(response);
-//  })
+ $.ajax({
+   url: userPreLimSearch,
+   method: "Get",
+ })
+ .then(function(response){
+   console.log(response);
+ })
 });
+
