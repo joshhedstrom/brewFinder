@@ -45,7 +45,8 @@ $("#searchButton").on("click", function(e) {
  console.log("You clicked the Search Button!");
  let userSearchTitle = $("#searchField").val();
  //attaches User search result to the https address required by googlemaps api
- let userPreLimSearch = "https://maps.googleapis.com/maps/api/geocode/json?address="+userSearchTitle+"&key=AIzaSyBSnJtTqZp2Nzg7w1o1rF19y2Eic3IuhCQ?"
+                        
+ let userPreLimSearch = "https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=AIzaSyBSnJtTqZp2Nzg7w1o1rF19y2Eic3IuhCQ"
  let googleGeocoding = 
 console.log(userPreLimSearch);
  event.preventDefault();
