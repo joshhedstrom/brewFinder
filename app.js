@@ -43,10 +43,13 @@ $(document).ready(function(){
   // Search button that gathers search field when user clicks search button, it also grabs users geoLocation
 $("#searchButton").on("click", function(e) {
  console.log("You clicked the Search Button!");
- let userSearchTitle = $("#searchField").val();
+ //catches information from search field. 
+ let searchTitle = $("#searchField").val();
+ let codedSearchTitle = encodeURIComponent(searchTitle);
+ console.log(codedSearchTitle)
  //attaches User search result to the https address required by googlemaps api
                         
- let userPreLimSearch = "https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=AIzaSyBSnJtTqZp2Nzg7w1o1rF19y2Eic3IuhCQ"
+ let userPreLimSearch = "https://maps.googleapis.com/maps/api/geocode/json?address="+ codedSearchTitle +"&key=AIzaSyBSnJtTqZp2Nzg7w1o1rF19y2Eic3IuhCQ"
  let googleGeocoding = 
 console.log(userPreLimSearch);
  event.preventDefault();
