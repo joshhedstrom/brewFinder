@@ -9,6 +9,7 @@
 		<link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+		 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Anton|Fjalla+One" rel="stylesheet">
@@ -28,12 +29,12 @@
 					<h2 class="header">Search for Your Local Breweries</h2>
 					<form action="search">
 						<div class="row">
-							<div class="input-field col m6 center">
-								<!-- <textarea id="searchField" class="materialize-textarea" type="submit"></textarea> -->
-								
-								<input type="search" id="searchField" placeholder="Search for Local Breweries">
+							<div>
+								<div class="input-field col m6 center">
+									<input type="search" id="searchField" placeholder="Search for Local Breweries">
+								</div>
+								<button class="btn btn-large waves-effect #212121 grey darken-2" type="button" id="current-location"><i class="medium material-icons">my_location</i></button>
 							</div>
-							<button class="btn btn-large" type="button" id="current-location"><i class="fas fa-crosshairs"></i></button>
 						</div>
 					</form>
 				</div>
