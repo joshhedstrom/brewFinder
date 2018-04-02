@@ -39,14 +39,9 @@ $("#searchButton").on("click", function(e) {
    userLongitude = response.results[0].geometry.location.lng;
 
    // Start of Geolocation fucntion
-
-    let currentLat = userLatitude;
-    let currentLng = userLongitude;
-    console.log(currentLat);
-    console.log(currentLng);
     
     const apiKey = "IB4MtYCaYXdQIdqm4K7847xEzhASkSEll2GFdl2tKVcElY8dSP3w-LCa03qSscEkwKVncUnsR5AizTA7EdD7FHmM1Qsr781Rsc3EqeKCIDw7jd8PFMRNaK1OwXS6WnYx"
-    let fetchUrl = `https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=breweries&latitude=${currentLat}&longitude=${currentLng}`
+    let fetchUrl = `https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=breweries&latitude=${userLatitude}&longitude=${userLongitude}`
 
     let myHeaders = new Headers();
     myHeaders.append("Authorization", "Bearer " + apiKey);
