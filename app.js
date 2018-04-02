@@ -42,8 +42,16 @@ $(document).ready(function(){
 $("#searchButton").on("click", function(e) {
  console.log("You clicked the Search Button!");
  let userSearchTitle = $("#searchField").val();
- let userPreLimSearch = "https://maps.googleapis.com/maps/api/geocode/json?address=" + userSearchTitle + "&key=AIzaSyBSnJtTqZp2Nzg7w1o1rF19y2Eic3IuhCQ?"
+ let userPreLimSearch = "https://maps.googleapis.com/maps/api/geocode/json?address="+userSearchTitle+"&key=AIzaSyBSnJtTqZp2Nzg7w1o1rF19y2Eic3IuhCQ?"
  let googleGeocoding = 
-
+console.log(userPreLimSearch);
  event.preventDefault();
+//  $.ajax({
+//    url: userPreLimSearch, 
+//    method: "Get"
+//  })
+//  .then(function(response){
+//   let response = reponse.data;
+//   console.log(response);
+//  })
 });
