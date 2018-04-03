@@ -2,6 +2,10 @@
 
 $(document).ready(function(){
 
+    var options = {hover: true};
+    var elem = document.querySelector('.dropdown-trigger');
+    var instance = M.Dropdown.init(elem, options);  
+
   // Global Variables
   const apiKey = "IB4MtYCaYXdQIdqm4K7847xEzhASkSEll2GFdl2tKVcElY8dSP3w-LCa03qSscEkwKVncUnsR5AizTA7EdD7FHmM1Qsr781Rsc3EqeKCIDw7jd8PFMRNaK1OwXS6WnYx"
   let fetchUrl;
