@@ -170,7 +170,5 @@ $("#searchButton").on("click", function(e) {
 
     });
 
-  })
-
-});
+  });
 
