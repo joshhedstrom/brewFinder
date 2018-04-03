@@ -22,6 +22,7 @@
 
 #breweryElement
 {
+    max-width: 1280px;
     width: auto;
 
     background-color: rgba(157, 157, 51, .7);
@@ -45,6 +46,7 @@
 {
     width: 150px;
 }
+
 
 .brewery-img
 {

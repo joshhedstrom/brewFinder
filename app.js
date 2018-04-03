@@ -20,9 +20,6 @@ $(document).ready(function(){
   // On Click function for Specified Location
   $("#searchButton").on("click", function(e) {
     event.preventDefault();
-    console.log(e)
-
-    console.log("Clicked Enter");
 
     //catches information from search field. 
     let searchTitle = $("#searchField").val();
@@ -44,7 +41,7 @@ $(document).ready(function(){
       userLongitude = response.results[0].geometry.location.lng;
 
       // Start of Geolocation fucntioN
-      let fetchUrl = `https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=breweries&latitude=${userLatitude}&longitude=${userLongitude}`
+      let fetchUrl = `https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=breweries&latitude=${userLatitude}&longitude=${userLongitude}&limit=10`
 
       let myHeaders = new Headers();
       myHeaders.append("Authorization", "Bearer " + apiKey);
@@ -54,18 +51,18 @@ $(document).ready(function(){
       }).then((res) => {
         return res.json();
       }).then((json) => {
-        console.log(json);
-        // console.log(json);
+
         let listOfBusinesses = json.businesses
         let newBrewDiv;
+        let newBrewSpan;
 
         // Iterates through the list of businesses and creats divs
         for (let i = 0; i < listOfBusinesses.length; i++) {
 
           let currentBiz = listOfBusinesses[i]
-          console.log(currentBiz)
 
           newBrewDiv = $("<div>")
+          newBrewSpan = $("<span>")
           newBrewDiv.attr("class", "brewery-div row")
           newBrewDiv.attr("id", currentBiz.id)
 
@@ -80,7 +77,7 @@ $(document).ready(function(){
           let breweryImg = $("<img>").attr("src", currentBiz.image_url)
           breweryImg.attr("class", "responsive-img brewery-img")
 
-          colLeft.append(breweryName)
+          newBrewSpan.append(breweryName)
           colLeft.append(breweryImg)
 
 
@@ -114,7 +111,7 @@ $(document).ready(function(){
           colRight.append(address, phone, yelpPage)
 
           // Adding Elements to the page
-          newBrewDiv.append(colLeft, colCenter, colRight)
+          newBrewDiv.append(newBrewSpan, colLeft, colCenter, colRight)
           $("#breweryElement").append(newBrewDiv)
         
         }
@@ -149,16 +146,16 @@ $(document).ready(function(){
         return res.json();
       }).then((json) => {
 
-        // console.log(json);
         let listOfBusinesses = json.businesses
         let newBrewDiv;
+        let newBrewSpan;
+        
 
         // Iterates through the list of businesses and creats divs
         for (let i = 0; i < listOfBusinesses.length; i++) {
 
           let currentBiz = listOfBusinesses[i]
-          // console.log(currentBiz)
-
+          newBrewSpan = $("<span>")
           newBrewDiv = $("<div>")
           newBrewDiv.attr("class", "brewery-div row")
           newBrewDiv.attr("id", currentBiz.id)
@@ -174,7 +171,7 @@ $(document).ready(function(){
           let breweryImg = $("<img>").attr("src", currentBiz.image_url)
           breweryImg.attr("class", "responsive-img brewery-img")
 
-          colLeft.append(breweryName)
+          newBrewSpan.append(breweryName)
           colLeft.append(breweryImg)
 
 
@@ -208,7 +205,7 @@ $(document).ready(function(){
           colRight.append(address, phone, yelpPage)
 
           // Adding Elements to the page
-          newBrewDiv.append(colLeft, colCenter, colRight)
+          newBrewDiv.append(newBrewSpan, colLeft, colCenter, colRight)
           $("#breweryElement").append(newBrewDiv)
 
         }   
