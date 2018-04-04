@@ -87,6 +87,9 @@ $(document).ready(function(){
   $("#searchButton").on("click", function(e) {
     event.preventDefault();
 
+    // Removes previously Viewed Breweries
+    $("#breweryElement").empty()
+
     //catches information from search field. 
     let searchTitle = $("#searchField").val();
     let codedSearchTitle = encodeURIComponent(searchTitle);
@@ -129,6 +132,9 @@ $(document).ready(function(){
 
   // On Click Function for Current Location
   $("#current-location").on("click", function () {
+
+    // Removes previously Viewed Breweries
+    $("#breweryElement").empty()
 
     // Start of Geolocation fucntion
     navigator.geolocation.getCurrentPosition(function(position) {
