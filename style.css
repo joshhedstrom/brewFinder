@@ -38,7 +38,20 @@
 h4 {
     text-align: center;
     font-size: 3.28rem;
+    color: #f5f5f5 !important;
 }
+
+
+
+p {
+    color: #f5f5f5 !important;
+}
+
+
+
+
+
+
 
 
 #breweryElement
@@ -53,12 +66,12 @@ h4 {
 .breweryInfo
 {
     font-size: 19px;
-    border-color: black;
-    border-width: 1px;
+/*    border-color: black;
+*/    border-width: 1px;
     border-radius: 7px;
     border-style: solid;
     margin: 0% 3% 3% 3%;
-    background-color: #212121;
+    background-color: #585858;
     color: white;
 }
 
@@ -71,7 +84,12 @@ h4 {
 
 .brewery-img
 {
-    height: 100px !important;
+/*    height: 100px !important;*/
+    margin: 2%
+    border-color: #00000014;
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 5px;;
 }
 
 footer
