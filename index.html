@@ -25,7 +25,7 @@
 				<header class="container center-align">
 					<div class="row">
 						<div class="col l12">
-						<h1 class="#f5f5f5 grey-text text-lighten-4
+						<h1 class="#f5f5f5 grey-text text-lighten-4 center-align
 	" id="mainHeader">brewFinder</h1>
 						</div>
 					</div>
@@ -33,7 +33,7 @@
 			</div>
 
 			<div class="section #ffffff grey lighten-3">
-				<div class="row container">
+				<div class="row container center-align">
 					<h2 class="header">Search for Your Local Breweries</h2>
 					<form action="search">
 						<div class="row">
@@ -43,8 +43,7 @@
 
 										 <i class="material-icons prefix">location_city</i>
 										 <input id="searchField" type="text" class="validate">
-         								 <label for="icon_prefix">Enter City</label>
-										
+         								 <label for="searchField">Enter City</label>
 									</div>
 									<div class="input-field col m5">
 										<i class="material-icons prefix">map</i>
@@ -58,14 +57,14 @@
 					</form>
 				<div class="row center-align">
 					<div class="input-field col m12">
-	                  <button class="btn btn-large waves-effect #212121 grey darken-2" type="button" id="current-location">Click for current location  <i class="medium material-icons">my_location</i></button>
+	                  <button class="btn btn-large waves-effect #212121 grey darken-2" type="button" id="current-location"><span>Click for current location</span><i id="targetIcon" class="medium material-icons">my_location</i></button>
 	                </div>
 				</div>
 				</div>
 			</div>
 			<section>
 				<div id="mainContent">
-					<div class="#ffffff grey lighten-3 container z-depth-2" id="breweryElement">
+					<div class="#ffffff grey lighten-3 container" id="breweryElement">
 						<!-- New Brewery Rows Go Here -->
 					</div>
 				</div>
