@@ -11,11 +11,74 @@ $(document).ready(function(){
   let fetchUrl;
   let userLat;
   let userLng;
+  let starPaths = [
+    // 0 Star Image Index 0
+    "./assets/images/yelp_stars/regular_0.png", 
+    // 1.5 Star Image Index 1
+    "./assets/images/yelp_stars/regular_1_half.png",
+    // 1 Star Image Index 2
+    "./assets/images/yelp_stars/regular_1.png",
+    // 2.5 Star Image Index 3
+    "./assets/images/yelp_stars/regular_2_half.png",
+    // 2 Star Image Index 4
+    "./assets/images/yelp_stars/regular_2.png",
+    // 3.5 Star Image Index 5
+    "./assets/images/yelp_stars/regular_3_half.png",
+    // 3 Star Image Index 6
+    "./assets/images/yelp_stars/regular_3.png",
+    // 4.5 Star Image Index 7
+    "./assets/images/yelp_stars/regular_4_half.png",
+    // 4 Star Image Index 8
+    "./assets/images/yelp_stars/regular_4.png",
+    // 5 Star Image Index 9
+    "./assets/images/yelp_stars/regular_5.png"
+  ]
 
   // General Use Function
   function milesToMeters (miles){
     meterConversion = miles * 1609.34;
     return meterConversion;
+  };
+
+  function determineStars(rating) {
+    let imgPath;
+
+    if (rating == 0) {
+      imgPath = starPaths[0] 
+
+    } else if (rating == 1) {
+      imgPath = starPaths[2]
+
+    } else if (rating == 1.5) {
+      imgPath = starPaths[1]
+
+    } else if (rating == 2) {
+      imgPath = starPaths[4]
+
+    } else if (rating == 2.5) {
+      imgPath = starPaths[3]
+
+    } else if (rating == 3) {
+      imgPath = starPaths[6]
+
+    } else if (rating == 3.5) {
+      imgPath = starPaths[5]
+
+    } else if (rating == 4) {
+      imgPath = starPaths[8]
+
+    } else if (rating == 4.5) {
+      imgPath = starPaths[7]
+
+    } else if (rating == 5) {
+      imgPath = starPaths[9]
+
+    } else {
+      console.log("There is an error with the rating")
+    }
+
+    return imgPath
+
   };
 
   function bizIteration (array) {
@@ -44,7 +107,8 @@ $(document).ready(function(){
   
   
       // Center Column Elements
-      let rating = $("<p>").attr("id", 'rating')
+      let yelpImg = determineStars(currentBiz.rating)
+      let rating = $("<img>").attr("src", yelpImg)
       let cost = $("<p>").attr("id", 'cost')
       let status = $("<p>").attr("id", 'status')
   
