@@ -89,6 +89,11 @@ p {
     width: 150px;
 }
 
+img.responsive-img, video.responsive-video {
+    max-width: 78%;
+    height: auto;
+}
+
 
 .brewery-img
 {
@@ -97,7 +102,9 @@ p {
     border-color: #00000014;
     border-width: 3px;
     border-style: solid;
-    border-radius: 5px;;
+    margin-bottom: 9%;
+    margin-left: 7%;
+    border-radius: 2%;
 }
 
 footer

@@ -25,7 +25,7 @@ $(document).ready(function(){
       let newBrewSpan = $("<span>")
       let newBrewDiv = $("<div>")
 
-      newBrewDiv.attr("class", "brewery-div row z-depth-3")
+      newBrewDiv.attr("class", "brewery-div row z-depth-2")
       newBrewDiv.attr("id", currentBiz.id)
   
       let colLeft = $("<div>").attr("class", "col s12 m4")
