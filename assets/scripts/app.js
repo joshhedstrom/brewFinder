@@ -11,6 +11,8 @@ $(document).ready(function(){
   let fetchUrl;
   let userLat;
   let userLng;
+  let miles;
+  let meters;
   let starPaths = [
     // 0 Star Image Index 0
     "./assets/images/yelp_stars/regular_0.png", 
@@ -34,10 +36,9 @@ $(document).ready(function(){
     "./assets/images/yelp_stars/regular_5.png"
   ]
 
-  // General Use Function
+  // General Use Functions
   function milesToMeters (miles){
-    meterConversion = miles * 1609.34;
-    return meterConversion;
+    return Math.floor(miles * 1609.34);
   };
 
   function determineStars(rating) {
@@ -113,7 +114,7 @@ $(document).ready(function(){
       let status = $("<p>").attr("id", 'status')
   
       rating.text(currentBiz.rating)
-      cost.text(currentBiz.price)
+      cost.text(`Price Range: ${currentBiz.price}`)
   
       if(currentBiz.is_closed) {
         status.text("Currently Closed")
@@ -126,15 +127,15 @@ $(document).ready(function(){
       // Right Column Elements
       let distance = $("<p>").attr("id", "distance")
       let address  = $("<p>").attr("id", "address")
-      let phone = $("<p>").attr("id", "phone")
+      let phoneLink = $("<a>").attr("href", `tel:${currentBiz.phone}`)
       let yelpPage = $("<a>").attr("id", "yelp-page")
   
-      address.html(currentBiz.location.display_address[0] + "<br>" + currentBiz.location.display_address[1])
-      phone.text(currentBiz.phone)
+      address.html("Address:" + "<br>" + currentBiz.location.display_address[0] + "<br>" + currentBiz.location.display_address[1])
+      phoneLink.html(`Phone:<br>${currentBiz.display_phone}<br><br>`)
       yelpPage.text("View on Yelp")
       yelpPage.attr("href", currentBiz.url)
   
-      colRight.append(address, phone, yelpPage)
+      colRight.append(address, phoneLink, yelpPage)
   
       // Adding Elements to the page
       newBrewDiv.append(newBrewSpan, colLeft, colCenter, colRight)
@@ -150,6 +151,14 @@ $(document).ready(function(){
   // On Click function for Specified Location
   $("#searchButton").on("click", function(e) {
     event.preventDefault();
+    miles = parseInt($("#icon_prefix").val())
+
+    // Checks to make sure miles is a number
+    if (isNaN(miles)) {
+      meters = milesToMeters(5);
+    } else {
+      meters = milesToMeters(miles);
+    }
 
     // Removes previously Viewed Breweries
     $("#breweryElement").empty()
@@ -172,7 +181,7 @@ $(document).ready(function(){
       userLng = response.results[0].geometry.location.lng;
 
       // Start of Geolocation fucntioN
-      let fetchUrl = `https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=breweries&latitude=${userLat}&longitude=${userLng}&limit=10`
+      let fetchUrl = `https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=breweries&latitude=${userLat}&longitude=${userLng}&radius=${meters}`
 
       let myHeaders = new Headers();
       myHeaders.append("Authorization", "Bearer " + apiKey);
@@ -184,6 +193,7 @@ $(document).ready(function(){
       }).then((json) => {
 
         let listOfBusinesses = json.businesses
+        console.log(listOfBusinesses)
 
         // Iterates through the list of businesses and creats divs
         bizIteration(listOfBusinesses)
@@ -196,6 +206,15 @@ $(document).ready(function(){
 
   // On Click Function for Current Location
   $("#current-location").on("click", function () {
+    
+    miles = parseInt($("#icon_prefix").val())
+
+    // Checks to make sure miles is a number
+    if (isNaN(miles)) {
+      meters = milesToMeters(5);
+    } else {
+      meters = milesToMeters(miles);
+    }
 
     // Removes previously Viewed Breweries
     $("#breweryElement").empty()
@@ -208,7 +227,7 @@ $(document).ready(function(){
       userLng = position.coords.longitude
 
       // Changes the fetch URL
-      fetchUrl = `https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=breweries&latitude=${userLat}&longitude=${userLng}&limit=10`
+      fetchUrl = `https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=breweries&latitude=${userLat}&longitude=${userLng}&radius=${meters}`
 
       // Creates the headers class object that holds the API key
       let myHeaders = new Headers();
@@ -222,6 +241,7 @@ $(document).ready(function(){
       }).then((json) => {
 
         let listOfBusinesses = json.businesses
+        console.log(listOfBusinesses)
 
         // Iterates through the list of businesses and creates divs
         bizIteration(listOfBusinesses)
