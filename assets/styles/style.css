@@ -32,8 +32,19 @@
     text-shadow: 0px 1px 58px #000000;
     font-size: 14vw;
 
-
 }
+
+#targetIcon {
+    margin-left: 1px;
+    font-size: 14px;
+    padding-left: 5px;
+    margin-right: -9px;
+}
+
+#current-location {
+    font-size: 15px;
+}
+
 
 h4 {
     text-align: center;
@@ -46,9 +57,6 @@ h4 {
 p {
     color: #f5f5f5 !important;
 }
-
-
-
 
 
 
@@ -81,6 +89,11 @@ p {
     width: 150px;
 }
 
+img.responsive-img, video.responsive-video {
+    max-width: 78%;
+    height: auto;
+}
+
 
 .brewery-img
 {
@@ -89,7 +102,9 @@ p {
     border-color: #00000014;
     border-width: 3px;
     border-style: solid;
-    border-radius: 5px;;
+    margin-bottom: 9%;
+    margin-left: 7%;
+    border-radius: 2%;
 }
 
 footer
