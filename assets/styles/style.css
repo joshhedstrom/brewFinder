@@ -101,7 +101,7 @@ img.responsive-img, video.responsive-video {
 .brewery-img
 {
 /*    height: 100px !important;*/
-    margin: 2%
+    margin: 2%;
     border-color: #00000014;
     border-width: 3px;
     border-style: solid;
@@ -124,4 +124,17 @@ body {
 
   main {
     flex: 1 0 auto;
+  }
+  /* label focus color */
+  .input-field input:focus + label {
+    color: red !important;
+  }
+  /* label underline focus color */
+  .row .input-field input:focus {
+    border-bottom: 1px solid red !important;
+    box-shadow: 0 1px 0 0 red !important
+  }
+  /* icon prefix focus color */
+  .input-field .prefix.active {
+    color: red;
   }
