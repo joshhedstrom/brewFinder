@@ -159,12 +159,13 @@ $(document).ready(function(){
     event.preventDefault();
 
     miles = parseInt($("#milesRadius").val())
-  console.log("radius: " + miles + " miles");
+        console.log("radius: " + miles + " miles");
 
     // Checks to make sure miles is a number
     if (isNaN(miles)) {
       meters = milesToMeters(5);
-    } else {
+    } 
+      else {
       meters = milesToMeters(miles);
     }
 
@@ -216,7 +217,7 @@ $(document).ready(function(){
   $("#current-location").on("click", function () {
     
     miles = parseInt($("#milesRadius").val())
-  console.log("radius: " + miles + " miles");
+        console.log("radius: " + miles + " miles");
 
     // Checks to make sure miles is a number
     if (isNaN(miles)) {
