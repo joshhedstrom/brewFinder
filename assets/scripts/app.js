@@ -1,5 +1,11 @@
 'use strict'
 
+// render drop-down radius
+$(document).ready(function(){
+  $('select').formSelect();
+});
+
+
 $(document).ready(function(){
 
     var options = {hover: true};
@@ -151,7 +157,9 @@ $(document).ready(function(){
   // On Click function for Specified Location
   $("#searchButton").on("click", function(e) {
     event.preventDefault();
-    miles = parseInt($("#icon_prefix").val())
+
+    miles = parseInt($("#milesRadius").val())
+  console.log("radius: " + miles + " miles");
 
     // Checks to make sure miles is a number
     if (isNaN(miles)) {
@@ -207,7 +215,8 @@ $(document).ready(function(){
   // On Click Function for Current Location
   $("#current-location").on("click", function () {
     
-    miles = parseInt($("#icon_prefix").val())
+    miles = parseInt($("#milesRadius").val())
+  console.log("radius: " + miles + " miles");
 
     // Checks to make sure miles is a number
     if (isNaN(miles)) {

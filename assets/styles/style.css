@@ -65,8 +65,7 @@ p {
 
 
 
-#breweryElement
-{
+#breweryElement {
     max-width: 1280px;
     width: auto;
 
@@ -74,11 +73,10 @@ p {
 }
 
 .brewery-div,
-.breweryInfo
-{
+.breweryInfo {
     font-size: 19px;
-/*    border-color: black;
-*/    border-width: 1px;
+/*    border-color: black; */
+    border-width: 1px;
     border-radius: 7px;
     border-style: solid;
     margin: 0% 3% 3% 3%;
@@ -87,8 +85,7 @@ p {
 }
 
 
-#picture
-{
+#picture {
     width: 150px;
 }
 
@@ -98,8 +95,7 @@ img.responsive-img, video.responsive-video {
 }
 
 
-.brewery-img
-{
+.brewery-img {
 /*    height: 100px !important;*/
     margin: 2%;
     border-color: #00000014;
@@ -110,8 +106,7 @@ img.responsive-img, video.responsive-video {
     border-radius: 2%;
 }
 
-footer
-{
+footer {
     text-align: center;
 }
 
@@ -120,21 +115,47 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-  }
+}
 
-  main {
+main {
     flex: 1 0 auto;
-  }
+}
+
+/* search box colors: ----> */  
+
   /* label focus color */
-  .input-field input:focus + label {
-    color: red !important;
-  }
+.input-field input:focus + label {
+    color: black !important;
+}
   /* label underline focus color */
-  .row .input-field input:focus {
-    border-bottom: 1px solid red !important;
-    box-shadow: 0 1px 0 0 red !important
-  }
+.row .input-field input:focus {
+    border-bottom: 1px solid black !important;
+    box-shadow: 0 1px 0 0 black !important
+}
   /* icon prefix focus color */
-  .input-field .prefix.active {
-    color: red;
-  }
+.input-field .prefix.active {
+    color: black;
+}
+  /* label color */
+.input-field label {
+    color: black;
+}
+  /* label focus color */
+.input-field input[type=text]:focus + label {
+    color: black;
+}
+  /* label underline focus color */
+.input-field input[type=text]:focus {
+    border-bottom: 1px solid black;
+    box-shadow: 0 1px 0 0 black;
+}
+  /* valid color */
+.input-field input[type=text].valid {
+    border-bottom: 1px solid black;
+    box-shadow: 0 1px 0 0 black;
+}
+  /* invalid color */
+.input-field input[type=text].invalid {
+    border-bottom: 1px solid black;
+    box-shadow: 0 1px 0 0 black;
+}
