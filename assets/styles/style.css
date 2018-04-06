@@ -132,6 +132,10 @@ main {
     border-bottom: 1px solid black !important;
     box-shadow: 0 1px 0 0 black !important
 }
+    /* options color drop-down menu */
+ul.dropdown-content.select-dropdown li span {
+    color: black; /* no need for !important :) */
+}
   /* icon prefix focus color */
 .input-field .prefix.active {
     color: black;

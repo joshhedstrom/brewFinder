@@ -8,9 +8,9 @@ $(document).ready(function(){
 
 $(document).ready(function(){
 
-    var options = {hover: true};
-    var elem = document.querySelector('.dropdown-trigger');
-    var instance = M.Dropdown.init(elem, options);  
+    // var options = {hover: true};
+    // var elem = document.querySelector('.dropdown-trigger');
+    // var instance = M.Dropdown.init(elem, options);  
 
   // Global Variables
   const apiKey = "IB4MtYCaYXdQIdqm4K7847xEzhASkSEll2GFdl2tKVcElY8dSP3w-LCa03qSscEkwKVncUnsR5AizTA7EdD7FHmM1Qsr781Rsc3EqeKCIDw7jd8PFMRNaK1OwXS6WnYx"
@@ -154,6 +154,7 @@ $(document).ready(function(){
   // Parallax Function
   $('.parallax').parallax();
 
+
   // On Click function for Specified Location
   $("#searchButton").on("click", function(e) {
     event.preventDefault();
@@ -164,13 +165,13 @@ $(document).ready(function(){
     // Checks to make sure miles is a number
     if (isNaN(miles)) {
       meters = milesToMeters(5);
-    } 
-      else {
+    } else {
       meters = milesToMeters(miles);
     }
 
     // Removes previously Viewed Breweries
     $("#breweryElement").empty()
+
 
     //catches information from search field. 
     let searchTitle = $("#searchField").val();
@@ -179,7 +180,7 @@ $(document).ready(function(){
     //attaches User search result to the https address required by googlemaps api
     let userPreLimSearch = "https://maps.googleapis.com/maps/api/geocode/json?address="+ codedSearchTitle +"&key=AIzaSyBSnJtTqZp2Nzg7w1o1rF19y2Eic3IuhCQ"
 
-  
+    // Start of Geolocation fucntioN
     $.ajax({
       url: userPreLimSearch,
       method: "GET",
@@ -189,7 +190,7 @@ $(document).ready(function(){
       userLat = response.results[0].geometry.location.lat;
       userLng = response.results[0].geometry.location.lng;
 
-      // Start of Geolocation fucntioN
+
       let fetchUrl = `https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=breweries&latitude=${userLat}&longitude=${userLng}&radius=${meters}`
 
       let myHeaders = new Headers();
@@ -209,9 +210,10 @@ $(document).ready(function(){
 
       });
 
-    })
+    });
 
   });
+
 
   // On Click Function for Current Location
   $("#current-location").on("click", function () {
@@ -229,6 +231,7 @@ $(document).ready(function(){
     // Removes previously Viewed Breweries
     $("#breweryElement").empty()
 
+
     // Start of Geolocation fucntion
     navigator.geolocation.getCurrentPosition(function(position) {
 
@@ -236,8 +239,9 @@ $(document).ready(function(){
       userLat = position.coords.latitude
       userLng = position.coords.longitude
 
+
       // Changes the fetch URL
-      fetchUrl = `https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=breweries&latitude=${userLat}&longitude=${userLng}&radius=${meters}`
+      let fetchUrl = `https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=breweries&latitude=${userLat}&longitude=${userLng}&radius=${meters}`
 
       // Creates the headers class object that holds the API key
       let myHeaders = new Headers();
