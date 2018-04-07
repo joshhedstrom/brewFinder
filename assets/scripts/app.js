@@ -1,19 +1,22 @@
 'use strict'
 
-// render drop-down radius
+// // render drop-down radius
+// $(document).ready(function(){
+//   $('select').formSelect();
+// });
+
+
 $(document).ready(function(){
+
   $('select').formSelect();
-});
-
-
-$(document).ready(function(){
-
     // var options = {hover: true};
     // var elem = document.querySelector('.dropdown-trigger');
     // var instance = M.Dropdown.init(elem, options);  
 
   // Global Variables
   const apiKey = "IB4MtYCaYXdQIdqm4K7847xEzhASkSEll2GFdl2tKVcElY8dSP3w-LCa03qSscEkwKVncUnsR5AizTA7EdD7FHmM1Qsr781Rsc3EqeKCIDw7jd8PFMRNaK1OwXS6WnYx"
+  let currentBizLat;
+  let currentBizLng;
   let fetchUrl;
   let userLat;
   let userLng;
@@ -92,6 +95,7 @@ $(document).ready(function(){
     for (let i = 0; i < array.length; i++) {
   
       let currentBiz = array[i]
+
       let newBrewSpan = $("<span>")
       let newBrewDiv = $("<div>")
 
@@ -117,26 +121,21 @@ $(document).ready(function(){
       let yelpImg = determineStars(currentBiz.rating)
       let rating = $("<img>").attr("src", yelpImg)
       let cost = $("<p>").attr("id", 'cost')
-      let status = $("<p>").attr("id", 'status')
   
       rating.text(currentBiz.rating)
       cost.text(`Price Range: ${currentBiz.price}`)
   
-      if(currentBiz.is_closed) {
-        status.text("Currently Closed")
-      } else {
-        status.text("Currently Open")
-      }
-  
-      colCenter.append(rating, cost, status)
+      colCenter.append(rating, cost)
   
       // Right Column Elements
       let distance = $("<p>").attr("id", "distance")
-      let address  = $("<p>").attr("id", "address")
+      let address  = $("<a>").attr("id", "address")
       let phoneLink = $("<a>").attr("href", `tel:${currentBiz.phone}`)
       let yelpPage = $("<a>").attr("id", "yelp-page")
   
-      address.html("Address:" + "<br>" + currentBiz.location.display_address[0] + "<br>" + currentBiz.location.display_address[1])
+      address.html("Address:" + "<br>" + currentBiz.location.display_address[0] + "<br>" + currentBiz.location.display_address[1] +"<br><br>")
+      address.attr("href", `https://www.google.com/maps/?q=${currentBiz.coordinates.latitude},${currentBiz.coordinates.longitude}`)
+      address.attr("target", "_blank")
       phoneLink.html(`Phone:<br>${currentBiz.display_phone}<br><br>`)
       yelpPage.text("View on Yelp")
       yelpPage.attr("href", currentBiz.url)
@@ -219,7 +218,6 @@ $(document).ready(function(){
   $("#current-location").on("click", function () {
     
     miles = parseInt($("#milesRadius").val())
-        console.log("radius: " + miles + " miles");
 
     // Checks to make sure miles is a number
     if (isNaN(miles)) {
