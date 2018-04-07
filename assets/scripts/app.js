@@ -2,10 +2,7 @@
 
 $(document).ready(function(){
 
-  $('select').formSelect();
-    // var options = {hover: true};
-    // var elem = document.querySelector('.dropdown-trigger');
-    // var instance = M.Dropdown.init(elem, options);  
+  $('select').formSelect(); 
 
   // Global Variables
   const apiKey = "IB4MtYCaYXdQIdqm4K7847xEzhASkSEll2GFdl2tKVcElY8dSP3w-LCa03qSscEkwKVncUnsR5AizTA7EdD7FHmM1Qsr781Rsc3EqeKCIDw7jd8PFMRNaK1OwXS6WnYx"
@@ -116,8 +113,8 @@ $(document).ready(function(){
       let rating = $("<img>").attr("src", yelpImg)
       let cost = $("<p>").attr("id", 'cost')
   
-      rating.text(currentBiz.rating)
-      cost.text(`Price Range: ${currentBiz.price}`)
+      rating.html("<br>" + currentBiz.rating)
+      cost.html(`Price Range: ${currentBiz.price}`)
   
       colCenter.append(rating, cost)
   
@@ -131,10 +128,14 @@ $(document).ready(function(){
       address.attr("href", `https://www.google.com/maps/?q=${currentBiz.coordinates.latitude},${currentBiz.coordinates.longitude}`)
       address.attr("target", "_blank")
       phoneLink.html(`Phone:<br>${currentBiz.display_phone}<br><br>`)
-      yelpPage.text("View on Yelp")
+      yelpPage.html("<br>View on Yelp")
       yelpPage.attr("href", currentBiz.url)
+      yelpPage.attr("target", "_blank")
   
-      colRight.append(address, phoneLink, yelpPage)
+      colRight.append(address, phoneLink)
+
+      // Moved yelpPage link to center column
+      colCenter.append(yelpPage)
   
       // Adding Elements to the page
       newBrewDiv.append(newBrewSpan, colLeft, colCenter, colRight)
