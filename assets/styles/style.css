@@ -4,46 +4,35 @@
 }
 
 .imgHeader {
-    background-image: url("../images/alcohol-ale-bar-159291.jpg");
+    background-image: url(../images/beer-blur-close-up-250465.jpg);
     background-repeat: no-repeat;
-    height: 34vh;
+    height: 48vh;
     background-size: cover;
-    margin-top: -40px;
+    margin-top: -43px;
     width: 100%;
     border-bottom: solid;
     border-width: 1px;
     border-bottom-color: grey;
+    background-position-y: -195px;
 }
 
 
-.parallax-container {
-    position: relative;
-    overflow: hidden;
-    height: 377px;
-}
-
-.parallax-container .parallax img {
-    opacity: 0;
-    position: absolute;
-    left: 50%;
-    bottom: 76px;
-    min-width: 100%;
-    min-height: 100%;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
-}
 
 
 
 #mainHeader {
-    font-family: 'Josefin Sans', sans-serif;
+     font-family: 'Josefin Sans', sans-serif;
     letter-spacing: -4px;
-    margin-top: 13%;
     text-shadow: 0px 1px 58px #000000;
     font-size: 14vw;
 
+}
+
+h1 {
+    line-height: 110%;
+    margin: 2.8rem 0 1.68rem 0;
+    padding-top: 62px;
+    color: white;
 }
 
 #targetIcon {
@@ -175,3 +164,48 @@ ul.dropdown-content.select-dropdown li span {
     border-bottom: 1px solid black;
     box-shadow: 0 1px 0 0 black;
 }
+
+
+
+
+
+@media screen and (max-width: 768px) {
+
+.imgHeader {
+    background-image: url(../images/beer-blur-close-up-250465.jpg);
+    background-repeat: no-repeat;
+    height: 25vh;
+    background-size: cover;
+    margin-top: -39px;
+    width: 100%;
+    border-bottom: solid;
+    border-width: 1px;
+    border-bottom-color: grey;
+    background-position-y: -40px;
+}
+
+
+}
+
+
+
+
+@media screen and (max-width: 1024px) {
+    .imgHeader {
+        background-image: url(../images/beer-blur-close-up-250465.jpg);
+    background-repeat: no-repeat;
+    height: 26vh;
+    background-size: cover;
+    margin-top: -42px;
+    width: 100%;
+    border-bottom: solid;
+    border-width: 1px;
+    border-bottom-color: grey;
+    background-position-y: -15px;
+}
+
+
+}
+
+
+
