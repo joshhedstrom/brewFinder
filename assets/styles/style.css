@@ -3,6 +3,18 @@
     width: 100%;
 }
 
+.imgHeader {
+    background-image: url("../images/alcohol-ale-bar-159291.jpg");
+    background-repeat: no-repeat;
+    height: 34vh;
+    background-size: cover;
+    margin-top: -40px;
+    width: 100%;
+    border-bottom: solid;
+    border-width: 1px;
+    border-bottom-color: grey;
+}
+
 
 .parallax-container {
     position: relative;
