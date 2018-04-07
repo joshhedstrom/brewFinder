@@ -6,8 +6,6 @@ $(document).ready(function(){
 
   // Global Variables
   const apiKey = "IB4MtYCaYXdQIdqm4K7847xEzhASkSEll2GFdl2tKVcElY8dSP3w-LCa03qSscEkwKVncUnsR5AizTA7EdD7FHmM1Qsr781Rsc3EqeKCIDw7jd8PFMRNaK1OwXS6WnYx"
-  let currentBizLat;
-  let currentBizLng;
   let fetchUrl;
   let userLat;
   let userLng;
@@ -107,7 +105,6 @@ $(document).ready(function(){
       newBrewSpan.append(breweryName)
       colLeft.append(breweryImg)
   
-  
       // Center Column Elements
       let yelpImg = determineStars(currentBiz.rating)
       let rating = $("<img>").attr("src", yelpImg)
@@ -127,7 +124,9 @@ $(document).ready(function(){
       address.html("Address:" + "<br>" + currentBiz.location.display_address[0] + "<br>" + currentBiz.location.display_address[1] +"<br><br>")
       address.attr("href", `https://www.google.com/maps/?q=${currentBiz.coordinates.latitude},${currentBiz.coordinates.longitude}`)
       address.attr("target", "_blank")
+
       phoneLink.html(`Phone:<br>${currentBiz.display_phone}<br><br>`)
+
       yelpPage.html("<br>View on Yelp")
       yelpPage.attr("href", currentBiz.url)
       yelpPage.attr("target", "_blank")
@@ -145,16 +144,11 @@ $(document).ready(function(){
   
   }
 
-  // Parallax Function
-  $('.parallax').parallax();
-
-
   // On Click function for Specified Location
   $("#searchButton").on("click", function(e) {
     event.preventDefault();
 
     miles = parseInt($("#milesRadius").val())
-        console.log("radius: " + miles + " miles");
 
     // Checks to make sure miles is a number
     if (isNaN(miles)) {
@@ -197,7 +191,7 @@ $(document).ready(function(){
       }).then((json) => {
 
         let listOfBusinesses = json.businesses
-        console.log(listOfBusinesses)
+        // console.log(listOfBusinesses)
 
         // Iterates through the list of businesses and creats divs
         bizIteration(listOfBusinesses)
@@ -248,7 +242,7 @@ $(document).ready(function(){
       }).then((json) => {
 
         let listOfBusinesses = json.businesses
-        console.log(listOfBusinesses)
+        // console.log(listOfBusinesses)
 
         // Iterates through the list of businesses and creates divs
         bizIteration(listOfBusinesses)
