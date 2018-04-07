@@ -31,7 +31,7 @@
 h1 {
     line-height: 110%;
     margin: 2.8rem 0 1.68rem 0;
-    padding-top: 62px;
+    padding-top: 90px;
     color: white;
 }
 
@@ -202,6 +202,13 @@ ul.dropdown-content.select-dropdown li span {
     border-width: 1px;
     border-bottom-color: grey;
     background-position-y: -15px;
+}
+
+h1 {
+    line-height: 110%;
+    margin: 2.8rem 0 1.68rem 0;
+    padding-top: 109px;
+    color: white;
 }
 
 
