@@ -169,19 +169,26 @@ ul.dropdown-content.select-dropdown li span {
 
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 546px) {
 
 .imgHeader {
     background-image: url(../images/beer-blur-close-up-250465.jpg);
     background-repeat: no-repeat;
-    height: 25vh;
+    height: 23vh;
     background-size: cover;
     margin-top: -39px;
     width: 100%;
     border-bottom: solid;
     border-width: 1px;
     border-bottom-color: grey;
-    background-position-y: -40px;
+    background-position-y: -60px;
+}
+
+h1 {
+    line-height: 110%;
+    margin: 2.8rem 0 1.68rem 0;
+    padding-top: 37px;
+    color: white;
 }
 
 
@@ -190,18 +197,18 @@ ul.dropdown-content.select-dropdown li span {
 
 
 
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 547px) and (max-width: 882px) {
     .imgHeader {
-        background-image: url(../images/beer-blur-close-up-250465.jpg);
+    background-image: url(../images/beer-blur-close-up-250465.jpg);
     background-repeat: no-repeat;
-    height: 26vh;
+    height: 34vh;
     background-size: cover;
     margin-top: -42px;
     width: 100%;
     border-bottom: solid;
     border-width: 1px;
     border-bottom-color: grey;
-    background-position-y: -15px;
+    background-position-y: -88px;
 }
 
 h1 {
