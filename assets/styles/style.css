@@ -105,6 +105,7 @@ img.responsive-img, video.responsive-video {
     margin-bottom: 9%;
     margin-left: 7%;
     border-radius: 2%;
+    max-height: 250px;
 }
 
 footer {
