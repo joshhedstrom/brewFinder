@@ -3,224 +3,247 @@
     width: 100%;
 }
 
-.imgHeader {
+.imgHeader
+{
+    width: 100%;
+    height: 48vh;
+    margin-top: -43px;
+
+    border-width: 1px;
+    border-bottom: solid;
+    border-bottom-color: grey;
     background-image: url(../images/beer-blur-close-up-250465.jpg);
     background-repeat: no-repeat;
-    height: 48vh;
-    background-size: cover;
-    margin-top: -43px;
-    width: 100%;
-    border-bottom: solid;
-    border-width: 1px;
-    border-bottom-color: grey;
     background-position-y: -195px;
+    background-size: cover;
 }
 
-
-
-
-
-#mainHeader {
-     font-family: 'Josefin Sans', sans-serif;
-    letter-spacing: -4px;
-    text-shadow: 0px 1px 58px #000000;
+#mainHeader
+{
+    font-family: 'Josefin Sans', sans-serif;
     font-size: 14vw;
 
+    letter-spacing: -4px;
+
+    text-shadow: 0 1px 58px #000;
 }
 
-h1 {
+h1
+{
     line-height: 110%;
+
     margin: 2.8rem 0 1.68rem 0;
     padding-top: 90px;
+
     color: white;
 }
 
-#targetIcon {
-    margin-left: 1px;
+#targetIcon
+{
     font-size: 14px;
-    padding-left: 5px;
+
     margin-right: -9px;
+    margin-left: 1px;
+    padding-left: 5px;
 }
 
-#current-location {
+#current-location
+{
     font-size: 15px;
 }
 
-
-h4 {
-    text-align: center;
+h4
+{
     font-size: 3.28rem;
-    color: #f5f5f5 !important;
+
     margin: 32px 6px 25px 6px;
+
+    text-align: center;
+
+    color: #f5f5f5 !important;
     border-bottom-width: 3px;
     border-bottom-style: solid;
 }
 
-
-
-p {
+p
+{
     color: #f5f5f5 !important;
 }
 
-
-
-
-
-#breweryElement {
-    max-width: 1280px;
+#breweryElement
+{
     width: auto;
+    max-width: 1280px;
 
     background-color: rgba(157, 157, 51, .7);
 }
 
 .brewery-div,
-.breweryInfo {
+.breweryInfo
+{
     font-size: 19px;
-/*    border-color: black; */
-    border-width: 1px;
-    border-radius: 7px;
-    border-style: solid;
-    margin: 0% 3% 3% 3%;
-    background-color: #585858;
+
+    margin: 0 3% 3% 3%;
+
     color: white;
+    /*    border-color: black; */
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 7px;
+    background-color: #585858;
 }
 
 
-#picture {
+#picture
+{
     width: 150px;
 }
 
-img.responsive-img, video.responsive-video {
+img.responsive-img,
+video.responsive-video
+{
     max-width: 78%;
     height: auto;
 }
 
 
-.brewery-img {
-/*    height: 100px !important;*/
+.brewery-img
+{
+    max-height: 250px;
+    /*    height: 100px !important;*/
     margin: 2%;
-    border-color: #00000014;
-    border-width: 3px;
-    border-style: solid;
     margin-bottom: 9%;
     margin-left: 7%;
+
+    border-width: 3px;
+    border-style: solid;
+    border-color: #00014;
     border-radius: 2%;
-    max-height: 250px;
 }
 
-footer {
+footer
+{
     text-align: center;
 }
 
 
-body {
+body
+{
     display: flex;
-    min-height: 100vh;
     flex-direction: column;
+
+    min-height: 100vh;
 }
 
-main {
+main
+{
     flex: 1 0 auto;
 }
 
-/* search box colors: ----> */  
+/* search box colors: ----> */
 
-  /* label focus color */
-.input-field input:focus + label {
+/* label focus color */
+.input-field input:focus + label
+{
     color: black !important;
 }
-  /* label underline focus color */
-.row .input-field input:focus {
+/* label underline focus color */
+.row .input-field input:focus
+{
     border-bottom: 1px solid black !important;
-    box-shadow: 0 1px 0 0 black !important
+    box-shadow: 0 1px 0 0 black !important;
 }
-    /* options color drop-down menu */
-ul.dropdown-content.select-dropdown li span {
+/* options color drop-down menu */
+ul.dropdown-content.select-dropdown li span
+{
     color: black; /* no need for !important :) */
 }
-  /* icon prefix focus color */
-.input-field .prefix.active {
+/* icon prefix focus color */
+.input-field .prefix.active
+{
     color: black;
 }
-  /* label color */
-.input-field label {
+/* label color */
+.input-field label
+{
     color: black;
 }
-  /* label focus color */
-.input-field input[type=text]:focus + label {
+/* label focus color */
+.input-field input[type=text]:focus + label
+{
     color: black;
 }
-  /* label underline focus color */
-.input-field input[type=text]:focus {
+/* label underline focus color */
+.input-field input[type=text]:focus
+{
     border-bottom: 1px solid black;
     box-shadow: 0 1px 0 0 black;
 }
-  /* valid color */
-.input-field input[type=text].valid {
+/* valid color */
+.input-field input[type=text].valid
+{
     border-bottom: 1px solid black;
     box-shadow: 0 1px 0 0 black;
 }
-  /* invalid color */
-.input-field input[type=text].invalid {
+/* invalid color */
+.input-field input[type=text].invalid
+{
     border-bottom: 1px solid black;
     box-shadow: 0 1px 0 0 black;
 }
 
+@media screen and (max-width: 546px)
+{
+    .imgHeader
+    {
+        width: 100%;
+        height: 23vh;
+        margin-top: -39px;
 
+        border-width: 1px;
+        border-bottom: solid;
+        border-bottom-color: grey;
+        background-image: url(../images/beer-blur-close-up-250465.jpg);
+        background-repeat: no-repeat;
+        background-position-y: -60px;
+        background-size: cover;
+    }
 
+    h1
+    {
+        line-height: 110%;
 
+        margin: 2.8rem 0 1.68rem 0;
+        padding-top: 37px;
 
-@media screen and (max-width: 546px) {
-
-.imgHeader {
-    background-image: url(../images/beer-blur-close-up-250465.jpg);
-    background-repeat: no-repeat;
-    height: 23vh;
-    background-size: cover;
-    margin-top: -39px;
-    width: 100%;
-    border-bottom: solid;
-    border-width: 1px;
-    border-bottom-color: grey;
-    background-position-y: -60px;
+        color: white;
+    }
 }
 
-h1 {
-    line-height: 110%;
-    margin: 2.8rem 0 1.68rem 0;
-    padding-top: 37px;
-    color: white;
+@media screen and (min-width: 547px) and (max-width: 882px)
+{
+    .imgHeader
+    {
+        width: 100%;
+        height: 34vh;
+        margin-top: -42px;
+
+        border-width: 1px;
+        border-bottom: solid;
+        border-bottom-color: grey;
+        background-image: url(../images/beer-blur-close-up-250465.jpg);
+        background-repeat: no-repeat;
+        background-position-y: -88px;
+        background-size: cover;
+    }
+
+    h1
+    {
+        line-height: 110%;
+
+        margin: 2.8rem 0 1.68rem 0;
+        padding-top: 109px;
+
+        color: white;
+    }
 }
-
-
-}
-
-
-
-
-@media screen and (min-width: 547px) and (max-width: 882px) {
-    .imgHeader {
-    background-image: url(../images/beer-blur-close-up-250465.jpg);
-    background-repeat: no-repeat;
-    height: 34vh;
-    background-size: cover;
-    margin-top: -42px;
-    width: 100%;
-    border-bottom: solid;
-    border-width: 1px;
-    border-bottom-color: grey;
-    background-position-y: -88px;
-}
-
-h1 {
-    line-height: 110%;
-    margin: 2.8rem 0 1.68rem 0;
-    padding-top: 109px;
-    color: white;
-}
-
-
-}
-
-
-
