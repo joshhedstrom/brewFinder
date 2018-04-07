@@ -1,11 +1,5 @@
 'use strict'
 
-// // render drop-down radius
-// $(document).ready(function(){
-//   $('select').formSelect();
-// });
-
-
 $(document).ready(function(){
 
   $('select').formSelect();
