@@ -218,6 +218,12 @@ ul.dropdown-content.select-dropdown li span
 
         color: white;
     }
+
+    #current-location {
+    font-size: 13px;
+    padding-right: 30px;
+}
+
 }
 
 @media screen and (min-width: 547px) and (max-width: 882px)
