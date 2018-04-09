@@ -29,26 +29,33 @@
 					<h2 class="header">Search for Your Local Breweries</h2>
 					<form action="search">
 						<div class="row center-align">
-							<div class="col m2"></div>
-							<div class="input-field col s12 m4">
-								<input id="searchField" type="text" class="validate">
-								<label for="searchField">
-									<i class="material-icons">location_city&nbsp;</i>
-									Enter City
-								</label>
-							</div>
-							<div class="input-field col s12 m2 pull-left">
-								<select id="milesRadius">
-									<option value="5">Radius</option>
-									<option value="5">5 miles</option>
-									<option value="10">10 miles</option>
-									<option value="20">20 miles</option>
-								</select>
-							</div>
-							<div class="col s12 m2">
-								<button class="btn btn-large waves-effect #212121 grey darken-2" type="submit" id="searchButton" data-search="">Search</button>
-							</div>
-							<div class="col s12 m2"></div>
+							<!-- <div class="col m2"></div> -->
+							<div class="row container">
+									
+									<!-- <div class="col m2">text</div> -->
+
+									<div class="input-field col m6 s12">
+										 <i class="material-icons prefix left-align">location_city</i>
+										 <input id="searchField" type="text" class="validate">
+         								 <label for="searchField">Enter City</label>
+									</div>
+
+									<div class="input-field col m4 s12 left-align">
+										<i class="material-icons prefix">map</i>
+										<select id="milesRadius">
+										  <option value="" disabled selected>Radius</option>
+										  <option value="5">5 miles</option>
+										  <option value="10">10 miles</option>
+										  <option value="20">20 miles</option>
+										</select>										
+									</div>
+
+									<div class="col m2">
+										<button class="btn btn-large waves-effect #212121 grey darken-2" type="submit" id="searchButton" data-search="">Search</button>
+									</div>
+
+									<!-- <div class="col m2">text</div> -->
+
 						</div>
 					</form>
 					<div class="row center-align">
