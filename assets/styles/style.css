@@ -18,7 +18,7 @@
     background-size: cover;
 }
 
-#mainHeader
+#mainHeader, h2
 {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 14vw;
