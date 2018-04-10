@@ -142,13 +142,13 @@ $(document).ready(function() {
         }
 
     }
-    
+
     // On Click function for Specified Location
     $("#searchButton").on("click", function(e) {
-        event.preventDefault();
+        e.preventDefault();
 
         miles = parseInt($("#milesRadius").val())
-        // console.log("radius: " + miles + " miles");
+            // console.log("radius: " + miles + " miles");
 
         // Checks to make sure miles is a number
         if (isNaN(miles)) {
@@ -242,7 +242,7 @@ $(document).ready(function() {
             }).then((json) => {
 
                 let listOfBusinesses = json.businesses
-                // console.log(listOfBusinesses)
+                    // console.log(listOfBusinesses)
 
                 // Iterates through the list of businesses and creates divs
                 bizIteration(listOfBusinesses)

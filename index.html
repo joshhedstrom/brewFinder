@@ -29,34 +29,30 @@
 					<h2 class="header">Search for Your Local Breweries</h2>
 					<form action="search">
 						<div class="row center-align">
-							
 							<div class="row container">
-																
-									<div class="input-field col m6 s12">
-										 <i class="material-icons prefix left-align">location_city</i>
-										 <input id="searchField" type="text" class="validate">
-         								 <label for="searchField">Enter City</label>
+								<div class="input-field col m6 s12">
+									<i class="material-icons prefix left-align">location_city</i>
+									<input id="searchField" type="text" class="validate">
+									<label for="searchField">Enter City</label>
+								</div>
+								<div class="input-field col m4 s12 left-align">
+									<i class="material-icons prefix">map</i>
+									<select id="milesRadius">
+										<option value="" disabled selected>Radius</option>
+										<option value="5">5 miles</option>
+										<option value="10">10 miles</option>
+										<option value="20">20 miles</option>
+									</select>
+								</div>
+								<div class="col m2 s2">
+									<button class="btn btn-large waves-effect #212121 grey darken-2" type="submit" id="searchButton" data-search="">Search</button>
+								</div>
+								<div class="row center-align">
+									<div class="input-field col m12 s11">
+										<button class="btn btn-large waves-effect #212121 grey darken-2" type="button" id="current-location"><span>Click for current location</span><i id="targetIcon" class="medium material-icons">my_location</i></button>
 									</div>
-
-									<div class="input-field col m4 s12 left-align">
-										<i class="material-icons prefix">map</i>
-										<select id="milesRadius">
-										  <option value="" disabled selected>Radius</option>
-										  <option value="5">5 miles</option>
-										  <option value="10">10 miles</option>
-										  <option value="20">20 miles</option>
-										</select>										
-									</div>
-
-									<div class="col m2 s2">
-										<button class="btn btn-large waves-effect #212121 grey darken-2" type="submit" id="searchButton" data-search="">Search</button>
-									</div>
-									
-									<div class="row center-align">
-										<div class="input-field col m12 s11">
-											<button class="btn btn-large waves-effect #212121 grey darken-2" type="button" id="current-location"><span>Click for current location</span><i id="targetIcon" class="medium material-icons">my_location</i></button>
-										</div>
-									</div>
+								</div>
+							</div>
 						</div>
 					</form>
 				</div>
@@ -75,11 +71,9 @@
 					© 2018 Copyright
 				</div>
 			</div>
-			
 		</footer>
 		<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 		<script src="./assets/scripts/app.js"></script>
-		
 	</body>
 </html>
