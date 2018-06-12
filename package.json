@@ -1,0 +1,25 @@
+{
+  "name": "brewFinder",
+  "version": "1.0.0",
+  "description": "A web application to help you find the breweries nearest you!",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshhedstrom/brewFinder.git"
+  },
+  "keywords": [],
+  "author": "Josh Hedstrom <josh.hedstrom@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/joshhedstrom/brewFinder/issues"
+  },
+  "homepage": "https://github.com/joshhedstrom/brewFinder#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "request": "^2.87.0"
+  }
+}
