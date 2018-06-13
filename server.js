@@ -1,9 +1,10 @@
-var express = require("express");
-var request = require("request");
-var app = express();
+const express = require("express");
+const request = require("request");
+const app = express();
 
-var PORT = process.env.PORT || 8080;
-var corsOptions = {
+const PORT = process.env.PORT || 8080;
+
+const corsOptions = {
   origin: process.env.ORIGIN_URL || "http://localhost",
   optionsSuccessStatus: 200
 };
@@ -15,5 +16,5 @@ app.use("/cors/*", function(req, res) {
 });
 
 app.listen(PORT, function() {
-  console.log("CORS-enabled web server listening on port " + PORT);
+  console.log(`CORS-enabled web server listening on port ${PORT}`);
 });
